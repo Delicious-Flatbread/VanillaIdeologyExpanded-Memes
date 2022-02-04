@@ -30,6 +30,10 @@
 		<defName>VME_AteChocolateSweetTeeth</defName>
 		<label>ate chocolate</label>
 	</HistoryEventDef>
+	<HistoryEventDef>
+		<defName>VME_AteCandySweetTeeth</defName>
+		<label>ate candy</label>
+	</HistoryEventDef>
 	
 	<!-- Precepts -->
 
@@ -83,6 +87,14 @@
 			</li>
 			<li Class="VanillaMemesExpanded.PreceptComp_AddDessertNeed">
 				<eventDef>VME_AteChocolateSweetTeeth</eventDef>
+				<needGain>0.05</needGain>
+			</li>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>VME_AteCandySweetTeeth</eventDef>
+				<thought>VCE_AteCandySweetTeeth_Craved</thought>
+			</li>
+			<li Class="VanillaMemesExpanded.PreceptComp_AddDessertNeed">
+				<eventDef>VME_AteCandySweetTeeth</eventDef>
 				<needGain>0.05</needGain>
 			</li>
 
@@ -169,7 +181,24 @@
 		</modExtensions>
 	</ThoughtDef>
 	
-	
+	<ThoughtDef>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<defName>VCE_AteCandySweetTeeth_Craved</defName>
+		<durationDays>1</durationDays>	
+		<stages>
+			<li>
+				<label>ate candy (craved)</label>
+				<description>Candy IS life.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+		</stages>
+		<modExtensions>
+			<li Class="VanillaCookingExpanded.Thought_Hediff_Extension">
+				<increaseJoy>true</increaseJoy>
+				<extraJoy>0.10</extraJoy>
+			</li>
+		</modExtensions>
+	</ThoughtDef>
 
 	<PreceptDef>
 		<defName>VME_Sweets_Impartial</defName>

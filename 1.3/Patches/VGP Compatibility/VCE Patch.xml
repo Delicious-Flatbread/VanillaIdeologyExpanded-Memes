@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!--Changes dessert recipe to accept VGP's berries for the purposes of Variety Matters-->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>VGP Garden Gourmet</li>
+			<li>Vanilla Cooking Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="VCE_CookDessertMealBase"]/fixedIngredientFilter</xpath>
+					<value>
+						<categories>
+							<li>FruitFoodRaw</li>
+						</categories>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="VCE_CookDessertMealBase"]/defaultIngredientFilter</xpath>
+					<value>
+						<categories>
+							<li>FruitFoodRaw</li>
+						</categories>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="VCE_CookComplexDessertMealBase"]/fixedIngredientFilter/categories</xpath>
+					<value>
+						<li>FruitFoodRaw</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="VCE_CookComplexDessertMealBase"]/defaultIngredientFilter/categories</xpath>
+					<value>
+						<li>FruitFoodRaw</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="VCE_CookGourmetDessertMealBase"]/fixedIngredientFilter/categories</xpath>
+					<value>
+						<li>FruitFoodRaw</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="VCE_CookGourmetDessertMealBase"]/defaultIngredientFilter/categories</xpath>
+					<value>
+						<li>FruitFoodRaw</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "VCE_CookDessertSimple"]/ingredients/li/filter</xpath>
+					<value>
+						<categories>
+							<li>FruitFoodRaw</li>
+						</categories>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "VCE_CookDessertSimpleBulk"]/ingredients/li/filter</xpath>
+					<value>
+						<categories>
+							<li>FruitFoodRaw</li>
+						</categories>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "VCE_CookDessertFine"]/ingredients/li[@Name="Fruit"]/filter</xpath>
+					<value>
+						<categories>
+							<li>FruitFoodRaw</li>
+						</categories>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "VCE_CookDessertFineBulk"]/ingredients/li[@Name="Fruit"]/filter</xpath>
+					<value>
+						<categories>
+							<li>FruitFoodRaw</li>
+						</categories>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "VCE_CookDessertLavish"]/ingredients/li[@Name="Fruit"]/filter</xpath>
+					<value>
+						<categories>
+							<li>FruitFoodRaw</li>
+						</categories>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "VCE_CookDessertLavishBulk"]/ingredients/li[@Name="Fruit"]/filter</xpath>
+					<value>
+						<categories>
+							<li>FruitFoodRaw</li>
+						</categories>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "VCE_CookDessertGourmet"]/ingredients/li[@Name="Fruit"]/filter</xpath>
+					<value>
+						<categories>
+							<li>FruitFoodRaw</li>
+						</categories>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
